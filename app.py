@@ -55,7 +55,7 @@ def send_tg_notification(message: str):
 
     try:
         resp = requests.post(
-            url, json=payload, timeout=10, impersonate="chrome", proxies=build_proxies()
+            url, json=payload, timeout=10, proxies=build_proxies()
         )
         if resp.status_code == 200:
             print("✅ TG 通知发送成功")
